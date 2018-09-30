@@ -4,6 +4,7 @@ import com.wasa.mcube.IntellijWorkshop.entity.Coin;
 import com.wasa.mcube.IntellijWorkshop.entity.Item;
 import com.wasa.mcube.IntellijWorkshop.exception.NotEnoughMoneyException;
 import org.apache.commons.lang3.mutable.MutableDouble;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -14,6 +15,7 @@ import static com.wasa.mcube.IntellijWorkshop.service.CoinUtils.sum;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
+@Component
 public class VendingMachineImpl implements VendingMachine {
 
     private List<Coin> money = new ArrayList<>();
