@@ -7,6 +7,8 @@ import com.wasa.mcube.IntellijWorkshop.exception.NotEnoughMoneyException;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static java.util.Collections.singletonList;
 import static org.junit.Assert.*;
@@ -14,12 +16,23 @@ import static org.junit.Assert.*;
 public class VendingMachineServiceTest {
 
     @Test
-    public void liveTemplate() {
-        List<String> strings = ImmutableList.of("hello", "world");
+    public void codeFragmentJson() {
+        List<String> strings = ImmutableList.of("{\n" +
+                "  \"name\": \"workshop\"\n" +
+                "}", "world");
 
         for (String string : strings) {
             System.out.println(string);
         }
+    }
+
+    @Test
+    public void codeFragmentRegex() {
+        Pattern pattern = Pattern.compile("[a-z]+@[a-z]+\\.com");
+
+        Matcher matcher = pattern.matcher("david@marfeel.com");
+
+        assertTrue(matcher.find());
     }
 
     @Test
