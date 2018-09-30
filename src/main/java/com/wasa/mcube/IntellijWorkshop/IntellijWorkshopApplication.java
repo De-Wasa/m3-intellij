@@ -1,6 +1,6 @@
 package com.wasa.mcube.IntellijWorkshop;
 
-import com.wasa.mcube.IntellijWorkshop.service.VendingMachine;
+import com.wasa.mcube.IntellijWorkshop.service.VendingMachineTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntellijWorkshopApplication {
 
-	private final VendingMachine vendingMachine;
+	private final VendingMachineTransaction vendingMachine;
 
 	@Autowired
-	public IntellijWorkshopApplication(VendingMachine vendingMachine) {
+	public IntellijWorkshopApplication(VendingMachineTransaction vendingMachine) {
 		this.vendingMachine = vendingMachine;
 	}
 

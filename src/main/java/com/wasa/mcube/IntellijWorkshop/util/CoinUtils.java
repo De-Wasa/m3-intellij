@@ -1,4 +1,4 @@
-package com.wasa.mcube.IntellijWorkshop.service;
+package com.wasa.mcube.IntellijWorkshop.util;
 
 import com.wasa.mcube.IntellijWorkshop.entity.Coin;
 import org.apache.commons.lang3.mutable.MutableDouble;
@@ -17,7 +17,7 @@ public class CoinUtils {
                 .sum();
     }
 
-    static List<Coin> calculateChange(double total, double cost) {
+    public static List<Coin> calculateChange(double total, double cost) {
         MutableDouble moneyLeft = new MutableDouble(total - cost);
         return EnumSet.allOf(Coin.class).stream()
                 .sorted(CoinUtils::moreValueFirst)

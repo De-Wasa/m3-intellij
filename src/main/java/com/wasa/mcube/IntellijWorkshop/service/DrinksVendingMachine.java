@@ -1,6 +1,6 @@
 package com.wasa.mcube.IntellijWorkshop.service;
 
-public class DrinksVendingMachine extends VendingMachineImpl {
+public class DrinksVendingMachine extends VendingMachineTransactionImpl {
 
 
 }
