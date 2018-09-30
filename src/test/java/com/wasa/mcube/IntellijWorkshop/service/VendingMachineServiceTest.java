@@ -1,5 +1,6 @@
 package com.wasa.mcube.IntellijWorkshop.service;
 
+import com.google.common.collect.ImmutableList;
 import com.wasa.mcube.IntellijWorkshop.entity.Coin;
 import com.wasa.mcube.IntellijWorkshop.entity.Item;
 import com.wasa.mcube.IntellijWorkshop.exception.NotEnoughMoneyException;
@@ -11,6 +12,15 @@ import static java.util.Collections.singletonList;
 import static org.junit.Assert.*;
 
 public class VendingMachineServiceTest {
+
+    @Test
+    public void liveTemplate() {
+        List<String> strings = ImmutableList.of("hello", "world");
+
+        for (String string : strings) {
+            System.out.println(string);
+        }
+    }
 
     @Test
     public void takesMoney_givesItem() {
